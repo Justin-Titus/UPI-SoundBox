@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">UPI SoundBox</string>
+    <string name="sms_permission_required">SMS permission is required to read UPI messages</string>
+    <string name="notification_permission_required">Notification access is required to read UPI notifications</string>
+    <string name="battery_optimization_warning">Please disable battery optimization for reliable operation</string>
+    <string name="transaction_received">Payment received of rupees %1$s</string>
+    <string name="no_transactions">No transactions found</string>
+</resources>
