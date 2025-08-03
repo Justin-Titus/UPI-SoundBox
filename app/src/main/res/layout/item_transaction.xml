@@ -1,74 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="4dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="2dp">
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="0dp"
+    app:cardBackgroundColor="?attr/colorSurface">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="12dp">
+        android:padding="16dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- Amount TextView -->
+        <TextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="₹500.00"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:textColor="@color/transaction_credit" />
 
-            <TextView
-                android:id="@+id/tv_amount"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="₹100.00"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/green" />
+        <!-- Transaction Type Tag -->
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/background_type_tag"
+            tools:text="RECEIVED"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:textColor="@color/transaction_credit" />
 
-            <TextView
-                android:id="@+id/tv_type"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="RECEIVED"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                android:textColor="@color/green"
-                android:background="@drawable/background_type_tag"
-                android:paddingHorizontal="8dp"
-                android:paddingVertical="2dp" />
-
-        </LinearLayout>
-
+        <!-- Sender/Recipient Info -->
         <TextView
             android:id="@+id/tv_sender"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="From: PAYTM"
+            android:layout_marginTop="8dp"
+            android:textColor="?attr/colorOnSurface"
             android:textSize="14sp"
-            android:textColor="@color/primary_text"
-            android:layout_marginTop="4dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_amount"
+            tools:text="From: John Doe" />
 
-        <TextView
-            android:id="@+id/tv_timestamp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="2024-01-15 10:30:45"
-            android:textSize="12sp"
-            android:textColor="@color/secondary_text"
-            android:layout_marginTop="4dp" />
-
+        <!-- Transaction Source -->
         <TextView
             android:id="@+id/tv_source"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Source: SMS"
+            android:layout_marginTop="4dp"
+            android:textColor="?attr/colorOnSurface"
+            android:alpha="0.7"
             android:textSize="12sp"
-            android:textColor="@color/secondary_text"
-            android:layout_marginTop="2dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sender"
+            tools:text="Source: GPAY" />
 
-    </LinearLayout>
+        <!-- Timestamp -->
+        <TextView
+            android:id="@+id/tv_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="?attr/colorOnSurface"
+            android:alpha="0.7"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sender"
+            tools:text="12:34 PM, 25 Oct" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>

@@ -35,11 +35,13 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
 
         // Set color based on transaction type
         if ("received".equals(transaction.getType())) {
-            holder.tvAmount.setTextColor(holder.itemView.getContext().getColor(R.color.green));
-            holder.tvType.setTextColor(holder.itemView.getContext().getColor(R.color.green));
+            int creditColor = holder.itemView.getContext().getColor(R.color.transaction_credit);
+            holder.tvAmount.setTextColor(creditColor);
+            holder.tvType.setTextColor(creditColor);
         } else {
-            holder.tvAmount.setTextColor(holder.itemView.getContext().getColor(R.color.red));
-            holder.tvType.setTextColor(holder.itemView.getContext().getColor(R.color.red));
+            int debitColor = holder.itemView.getContext().getColor(R.color.transaction_debit);
+            holder.tvAmount.setTextColor(debitColor);
+            holder.tvType.setTextColor(debitColor);
         }
     }
 

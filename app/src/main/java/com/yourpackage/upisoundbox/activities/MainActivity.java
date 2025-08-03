@@ -5,19 +5,20 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
+
+import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.yourpackage.upisoundbox.R;
 import com.yourpackage.upisoundbox.utils.PermissionHelper;
 import com.yourpackage.upisoundbox.utils.TTSHelper;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Switch smsSwitch, notificationSwitch;
+    private SwitchMaterial smsSwitch;
+    private SwitchMaterial notificationSwitch;
     private Button btnSmsPermission, btnNotificationPermission, btnBatteryOptimization;
     private Button btnHistory, btnTestTTS;
     private TextView tvStatus;

@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary_color">#2196F3</color>
-    <color name="primary_dark_color">#1976D2</color>
-    <color name="accent_color">#FF4081</color>
-    <color name="background_color">#F5F5F5</color>
-    <color name="card_background">#FFFFFF</color>
-    <color name="primary_text">#212121</color>
-    <color name="secondary_text">#757575</color>
-    <color name="green">#4CAF50</color>
-    <color name="red">#F44336</color>
+    <!-- Brand & Accent Colors -->
+    <color name="md_theme_primary">#005792</color>
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_primaryContainer">#D1E4FF</color>
+    <color name="md_theme_secondary">#00A8A8</color>
+    <color name="md_theme_onSecondary">#FFFFFF</color>
+
+    <!-- App Surface & Background -->
+    <color name="md_theme_surface">#F8F9FA</color>
+    <color name="md_theme_onSurface">#1C1C1E</color>
+
+    <!-- Semantic Colors for Transactions -->
+    <color name="transaction_credit">#198754</color> <!-- Your new "green" -->
+    <color name="transaction_debit">#DC3545</color>  <!-- Your new "red" -->
+
+    <!-- Legacy/Unthemed Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
 </resources>
